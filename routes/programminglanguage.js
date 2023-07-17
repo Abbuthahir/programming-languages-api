@@ -5,7 +5,7 @@ const programmingLanguages = require('../services/programminglanguage');
 /* GET programming languages. */
 router.get('/', async function(req, res, next) {
   try {
-    console.log('reqAction', req.query, res)
+    // console.log('reqAction', req.query, res)
     res.json(await programmingLanguages.getMultiple(req.query.page, req.query.category));
   } catch (err) {
     console.error(`Error while getting programming languages `, err.message);
